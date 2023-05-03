@@ -7,3 +7,4 @@ dist/index.a521242b.js
 *.mdb
 .parcel-cache
 *.mdb
+.DS_Store
