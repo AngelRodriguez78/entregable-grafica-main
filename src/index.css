@@ -1,4 +1,17 @@
+body{
+    background-color: gray;
+    
+}
+
+canvas{
+    padding: 25px;
+    margin: auto;
+    
+}
+
+
 h1{
     color: brown;
     text-align: center;
 }
+
