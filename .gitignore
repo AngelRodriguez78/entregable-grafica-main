@@ -8,3 +8,4 @@ dist/index.a521242b.js
 .parcel-cache
 *.mdb
 .DS_Store
+.parcel-cache/lock.mdb
