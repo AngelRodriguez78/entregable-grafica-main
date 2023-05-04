@@ -1,19 +1,123 @@
-body{
-    background-color: gray;
-    
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-canvas{
-    color: black;
-    background: white;
-    padding: 0px;
+
+body {
+    background-color: #2D3E40;
+
+}
+
+/* Header */
+
+header {
+    padding: 20px;
+    border: #93BFB7 solid 2px;
+}
+
+header img {
+    width: 10%;
+}
+
+/* Responsive Header */
+
+@media (max-width:400px) {
+    header img{
+        display: flex;
+        width: 30%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+/* Main / Canvas  */
+
+.canvis {
     margin: auto;
-    
+    color: black;
+    background: #E4F2E7;
+    width: 700px;
+    height: 300px;
 }
 
+@media (max-width:400px) {
+    .canvis{
+    margin: auto;
+    color: black;
+    background: #E4F2E7;
+    width: 360px;
+    height: 200px;
+    }
+}
 
-h1{
-    color: brown;
+h1 {
+    margin: 50px 50px;
+    color: #E4F2E7;
     text-align: center;
 }
 
+
+
+
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #E4F2E7;
+    text-align: center;
+    margin: 0% auto;
+}
+
+footer h3 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+footer p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+
+}
+
+.copy {
+    background: #000;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.copy a {
+    text-decoration: none;
+    color: #93BFB7;
+    font-size: 16px;
+}
+
+@media (max-width:400px) {
+    footer{
+        height: auto;
+        padding: 0%;
+        width: auto;
+    }
+}
