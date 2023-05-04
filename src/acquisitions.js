@@ -1,5 +1,5 @@
 import Chart from 'chart.js/auto';
-import {incrementarValor} from './funciones.js';
+import { incrementarValor } from './funciones.js';
 import { getAquisitionsByYear } from './api'
 
 (async function () {
@@ -13,22 +13,28 @@ import { getAquisitionsByYear } from './api'
     //     { year: 2016, count: 28 },
     // ].map(fila => ( { ...fila, count: incrementarValor(fila.count) } ) );
 
-    const data = await getAquisitionsByYear();
-
-    new Chart(
-        document.getElementById('acquisitions'),
-        {
-            //bar, line, doughnut, radar, polararea, bubble
-            type: 'bubble',
-            data: {
-                labels: data.map(row => row.year),
-                datasets: [
-                    {
-                        label: 'Acquisitions by year',
-                        data: data.map(row => row.count)
+    const data = await fetch('https://sample-api-29g5.onrender.com/libros')
+    .then(res => res.json())
+    .then(data => {
+            let registros = data.data;
+            console.log(registros);
+            new Chart(
+                document.getElementById('acquisitions'),
+                {
+                    //bar, line, doughnut, radar, polararea, bubble
+                    type: 'bar',
+                    data: {
+                        labels: registros.map(row => row.title),
+                        datasets: [
+                            {
+                                label: 'Acquisitions by year',
+                                data: registros.map(row => row.count)
+                            }
+                        ]
                     }
-                ]
-            }
-        }
-    );
-})();
+                }
+            );
+        })();
+
+
+})
